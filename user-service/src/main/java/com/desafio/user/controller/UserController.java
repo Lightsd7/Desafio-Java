@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.desafio.user.VO.ResponseTemplateVO;
 import com.desafio.user.entity.User;
 import com.desafio.user.service.UserService;
 
@@ -29,8 +31,14 @@ public class UserController {
 		return userService.findAll();
 	}
 
-	@GetMapping("/{cpf}")
-	public User findUserById(@PathVariable Long cpf) {
-		return userService.findUserById(cpf);
+	@GetMapping("/{id}")
+	public ResponseTemplateVO getUserWithCompany(@PathVariable("id") Long cpf) {
+		return userService.getUserWithCompany(cpf);
 	}
+	
+	@GetMapping("/cnpj/{cnpj}")
+	public List<User> findByCnpj(@PathVariable Long cnpj) {
+		return userService.findByCnpj(cnpj);
+	}
+
 }
