@@ -6,19 +6,29 @@ public class ResponseTemplateVO {
 
 	private User user;
 	private Company company;
+<<<<<<< HEAD
 	private Partner partner;
 	private String msg;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 
 	public ResponseTemplateVO() {
 		super();
 	}
 
+<<<<<<< HEAD
 	public ResponseTemplateVO(User user, Company company, Partner partner, String msg) {
 		super();
 		this.user = user;
 		this.company = company;
 		this.partner = partner;
 		this.msg = msg;
+=======
+	public ResponseTemplateVO(User user, Company company) {
+		super();
+		this.user = user;
+		this.company = company;
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 	}
 
 	public User getUser() {
@@ -37,6 +47,7 @@ public class ResponseTemplateVO {
 		this.company = company;
 	}
 
+<<<<<<< HEAD
 	public Partner getPartner() {
 		return partner;
 	}
@@ -53,4 +64,6 @@ public class ResponseTemplateVO {
 		this.msg = msg;
 	}
 
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 }

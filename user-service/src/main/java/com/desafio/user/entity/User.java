@@ -11,29 +11,41 @@ public class User {
 	private Long cpf;
 	private String name;
 	private String lastName;
+<<<<<<< HEAD
 	private String msg;
 	@Column(name = "cnpj", nullable = false)
 	private Long cnpj;
 	@Column(name = "cpfPartner")
 	private Long cpfPartner;
+=======
+	@Column(name = "cnpj", nullable = false)
+	private Long cnpj;
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 
 	public User() {
 		super();
 	}
 
+<<<<<<< HEAD
 	public User(String msg) {
 		super();
 		this.msg = msg;
 	}
 
 	public User(Long cpf, String name, String lastName, Long cnpj, Long cpfPartner, String msg) {
+=======
+	public User(Long cpf, String name, String lastName, Long cnpj) {
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 		super();
 		this.cpf = cpf;
 		this.name = name;
 		this.lastName = lastName;
 		this.cnpj = cnpj;
+<<<<<<< HEAD
 		this.cpfPartner = cpfPartner;
 		this.msg = msg;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 	}
 
 	public Long getCpf() {
@@ -68,6 +80,7 @@ public class User {
 		this.cnpj = cnpj;
 	}
 
+<<<<<<< HEAD
 	public Long getCpfPartner() {
 		return cpfPartner;
 	}
@@ -84,4 +97,6 @@ public class User {
 		this.msg = msg;
 	}
 
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 }

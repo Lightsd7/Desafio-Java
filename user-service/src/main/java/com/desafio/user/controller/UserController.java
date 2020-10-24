@@ -41,14 +41,25 @@ public class UserController {
 		return userService.getUserWithCompany(cpf);
 	}
 
+<<<<<<< HEAD
+=======
+	@GetMapping("/{id}")
+	public ResponseTemplateVO getUserWithCompany(@PathVariable("id") Long cpf) {
+		return userService.getUserWithCompany(cpf);
+	}
+	
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 	@GetMapping("/cnpj/{cnpj}")
 	public List<User> findByCnpj(@PathVariable Long cnpj) {
 		return userService.findByCnpj(cnpj);
 	}
 
+<<<<<<< HEAD
 //	@GetMapping("/partner/{cpfPartner}")
 //	public ResponseTemplateVO getUserWithPartner(@PathVariable("cpfPartner") Long cpfPartner) {
 //		return userService.getUserWithPartner(cpfPartner);
 //	}
 
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 }

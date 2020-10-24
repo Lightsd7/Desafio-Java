@@ -8,17 +8,27 @@ public class ResponseTemplateVO {
 
 	private List<User> users;
 	private Company company;
+<<<<<<< HEAD
 	private String msg;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 
 	public ResponseTemplateVO() {
 		super();
 	}
 
+<<<<<<< HEAD
 	public ResponseTemplateVO(List<User> users, Company company, String msg) {
 		super();
 		this.users = users;
 		this.company = company;
 		this.msg = msg;
+=======
+	public ResponseTemplateVO(List<User> users, Company company) {
+		super();
+		this.users = users;
+		this.company = company;
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 	}
 
 	public List<User> getUsers() {
@@ -37,6 +47,7 @@ public class ResponseTemplateVO {
 		this.company = company;
 	}
 
+<<<<<<< HEAD
 	public String getMsg() {
 		return msg;
 	}
@@ -45,4 +56,6 @@ public class ResponseTemplateVO {
 		this.msg = msg;
 	}
 
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 }

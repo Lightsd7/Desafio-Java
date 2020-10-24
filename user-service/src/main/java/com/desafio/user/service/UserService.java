@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.desafio.user.VO.Company;
+<<<<<<< HEAD
 import com.desafio.user.VO.Partner;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 import com.desafio.user.VO.ResponseTemplateVO;
 import com.desafio.user.entity.User;
 import com.desafio.user.repository.UserRepository;
@@ -36,6 +39,20 @@ public class UserService {
 
 	public List<User> findAll() {
 		return userRepository.findAll();
+	}
+	
+	public List<User> findByCnpj(Long cnpj) {
+		return userRepository.findByCnpj(cnpj);
+	}
+
+	public ResponseTemplateVO getUserWithCompany(Long cpf) {
+		ResponseTemplateVO vo = new ResponseTemplateVO();
+		User user = userRepository.findUserByCpf(cpf);
+
+		Company company = restTemplate.getForObject("http://localhost:9092/companies/" + user.getCnpj(), Company.class);
+		vo.setUser(user);
+		vo.setCompany(company);
+		return vo;
 	}
 
 	public List<User> findByCnpj(Long cnpj) {

@@ -1,6 +1,9 @@
 package com.desafio.company.VO;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,19 +14,29 @@ public class User {
 	private Long cpf;
 	private String name;
 	private String lastName;
+<<<<<<< HEAD
 	@Column(name = "cpfPartner")
 	private Long cpfPartner;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 
 	public User() {
 		super();
 	}
 
+<<<<<<< HEAD
 	public User(Long cpf, String name, String lastName, Long cpfPartner) {
+=======
+	public User(Long cpf, String name, String lastName) {
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 		super();
 		this.cpf = cpf;
 		this.name = name;
 		this.lastName = lastName;
+<<<<<<< HEAD
 		this.cpfPartner = cpfPartner;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 	}
 
 	public Long getCpf() {
@@ -50,6 +63,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
+<<<<<<< HEAD
 	public Long getCpfPartner() {
 		return cpfPartner;
 	}
@@ -58,4 +72,6 @@ public class User {
 		this.cpfPartner = cpfPartner;
 	}
 
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
 }
