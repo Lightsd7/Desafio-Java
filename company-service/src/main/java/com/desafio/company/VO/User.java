@@ -1,4 +1,4 @@
-package com.desafio.user.entity;
+package com.desafio.company.VO;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,9 +11,6 @@ public class User {
 	private Long cpf;
 	private String name;
 	private String lastName;
-	private String msg;
-	@Column(name = "cnpj", nullable = false)
-	private Long cnpj;
 	@Column(name = "cpfPartner")
 	private Long cpfPartner;
 
@@ -21,19 +18,12 @@ public class User {
 		super();
 	}
 
-	public User(String msg) {
-		super();
-		this.msg = msg;
-	}
-
-	public User(Long cpf, String name, String lastName, Long cnpj, Long cpfPartner, String msg) {
+	public User(Long cpf, String name, String lastName, Long cpfPartner) {
 		super();
 		this.cpf = cpf;
 		this.name = name;
 		this.lastName = lastName;
-		this.cnpj = cnpj;
 		this.cpfPartner = cpfPartner;
-		this.msg = msg;
 	}
 
 	public Long getCpf() {
@@ -60,28 +50,12 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public Long getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(Long cnpj) {
-		this.cnpj = cnpj;
-	}
-
 	public Long getCpfPartner() {
 		return cpfPartner;
 	}
 
 	public void setCpfPartner(Long cpfPartner) {
 		this.cpfPartner = cpfPartner;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
 	}
 
 }
