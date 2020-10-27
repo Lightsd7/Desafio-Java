@@ -9,14 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.desafio</groupId>
-	<artifactId>user-service</artifactId>
+	<artifactId>partner-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-service</name>
-	<description>user-service</description>
+	<name>partner-service</name>
+	<description>partner-service</description>
 
 	<properties>
 		<java.version>11</java.version>
-		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -50,7 +49,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
