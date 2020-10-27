@@ -2,7 +2,14 @@ package com.desafio.company.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+<<<<<<< HEAD
 import javax.validation.constraints.NotNull;
+=======
+<<<<<<< HEAD
+import javax.validation.constraints.NotNull;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 
 @Entity(name = "companies")
 public class Company {
@@ -11,17 +18,33 @@ public class Company {
 	private Long cnpj;
 	private String razaoSocial;
 	private String nomeFantasia;
+<<<<<<< HEAD
 	private String msg;
+=======
+<<<<<<< HEAD
+	private String msg;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 
 	public Company() {
 		super();
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	public Company(String msg) {
 		super();
 		this.setMsg(msg);
 	}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	public Company(Long cnpj, String razaoSocial, String nomeFantasia) {
 		super();
 		this.cnpj = cnpj;
@@ -53,6 +76,10 @@ public class Company {
 		this.nomeFantasia = nomeFantasia;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	public String getMsg() {
 		return msg;
 	}
@@ -60,5 +87,10 @@ public class Company {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 
 }

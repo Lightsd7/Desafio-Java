@@ -21,6 +21,7 @@ public class PartnerService {
 	private RestTemplate restTemplate;
 
 	public Partner savePartner(Partner partner) {
+<<<<<<< HEAD
 //		User user = findUser(partner.getCpf());
 		if (partnerRepository.findPartnerByCpfPartner(partner.getCpfPartner()) == null) {
 			if (findUser(partner.getCpf()) != null) {
@@ -52,6 +53,15 @@ public class PartnerService {
 		return temp;
 	}
 
+=======
+		return partnerRepository.save(partner);
+	}
+
+	public Partner findPartnerByCpfPartner(Long cpfPartner) {
+		return partnerRepository.findPartnerByCpfPartner(cpfPartner);
+	}
+	
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	public List<Partner> findAll() {
 		return partnerRepository.findAll();
 	}
@@ -65,9 +75,12 @@ public class PartnerService {
 		vo.setUser(user);
 		return vo;
 	}
+<<<<<<< HEAD
 
 	private User findUser(Long cpf) {
 		User user = restTemplate.getForObject("http://localhost:9001/users/cpf/" + cpf, User.class);
 		return user;
 	}
+=======
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 }

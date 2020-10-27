@@ -1,5 +1,6 @@
 package com.desafio.company.service;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +17,31 @@ import com.desafio.company.VO.User;
 import com.desafio.company.VO.UserVO;
 import com.desafio.company.entity.Company;
 import com.desafio.company.repository.CompanyRepository;
+=======
+import java.util.Arrays;
+import java.util.List;
+<<<<<<< HEAD
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+=======
+
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.desafio.company.VO.ResponseTemplateVO;
+import com.desafio.company.VO.User;
+import com.desafio.company.entity.Company;
+import com.desafio.company.repository.CompanyRepository;
+<<<<<<< HEAD
+import com.desafio.company.response.Response;
+import com.desafio.company.service.exceptions.ObjectNotFoundException;
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 
 @Service
 public class CompanyService {
@@ -27,6 +53,7 @@ public class CompanyService {
 	private RestTemplate restTemplate;
 
 	public Company saveCompany(Company company) {
+<<<<<<< HEAD
 		if (companyRepository.findCompanyByCnpj(company.getCnpj()) == null) {
 			return companyRepository.save(company);
 		} else {
@@ -47,6 +74,19 @@ public class CompanyService {
 			return new Company("CNPJ não encontrado: " + cnpj);
 		}
 		
+=======
+		return companyRepository.save(company);
+	}
+<<<<<<< HEAD
+	
+	public Company findCompanyByCnpj(Long cnpj) {
+		Company company = companyRepository.findCompanyByCnpj(cnpj);
+		if(company != null) {
+			return company;
+		}else {
+			return new Company("CNPJ não encontrado: " + cnpj);
+		}
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	}
 
 //	public Company findCompanyByCnpj(Long cnpj) {
@@ -67,12 +107,23 @@ public class CompanyService {
 //		return ResponseEntity.ok(response);
 //	}
 
+<<<<<<< HEAD
+=======
+=======
+
+	public Company findCompanyByCnpj(Long cnpj) {
+		return companyRepository.findCompanyByCnpj(cnpj);
+	}
+
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	public List<Company> findAll() {
 		return companyRepository.findAll();
 	}
 
 	public ResponseTemplateVO getCompanyWithUser(Long cnpj) {
 		ResponseTemplateVO vo = new ResponseTemplateVO();
+<<<<<<< HEAD
 		try {
 			Company company = companyRepository.findCompanyByCnpj(cnpj);
 			User[] temp = restTemplate.getForObject("http://localhost:9001/users/cnpj/" + company.getCnpj(),
@@ -110,4 +161,26 @@ public class CompanyService {
 		Partner partner = restTemplate.getForObject("http://localhost:9007/partners/" + cpfPartner, Partner.class);
 		return partner;
 	}
+=======
+<<<<<<< HEAD
+		try {
+			Company company = companyRepository.findCompanyByCnpj(cnpj);
+			User[] temp = restTemplate.getForObject("http://localhost:9001/users/cnpj/" + company.getCnpj(), User[].class);
+			vo.setUsers(Arrays.asList(temp));
+			vo.setCompany(company);
+		} catch (Exception e) {
+			vo.setMsg("Sistema indisponível, tente mais tarde.");
+		}
+		
+=======
+		Company company = companyRepository.findCompanyByCnpj(cnpj);
+
+		User[] temp = restTemplate.getForObject("http://localhost:9001/users/cnpj/" + company.getCnpj(), User[].class);
+		vo.setUsers(Arrays.asList(temp));
+		vo.setCompany(company);
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+		return vo;
+	}
+
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 }

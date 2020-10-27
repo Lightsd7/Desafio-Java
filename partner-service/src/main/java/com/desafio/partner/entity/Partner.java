@@ -12,7 +12,10 @@ public class Partner {
 	private String name;
 	private String lastName;
 	private Boolean isMarried;
+<<<<<<< HEAD
 	private String msg;
+=======
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	@Column(name = "cpf", nullable = false)
 	private Long cpf;
 
@@ -20,6 +23,7 @@ public class Partner {
 		super();
 	}
 
+<<<<<<< HEAD
 	public Partner(String msg) {
 		super();
 		this.msg = msg;
@@ -32,6 +36,14 @@ public class Partner {
 		this.lastName = lastName;
 		this.isMarried = isMarried;
 		this.msg = msg;
+=======
+	public Partner(String name, String lastName, Long cpfPartner, Boolean isMarried, Long cpf) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.cpfPartner = cpfPartner;
+		this.isMarried = isMarried;
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 		this.cpf = cpf;
 	}
 
@@ -75,6 +87,7 @@ public class Partner {
 		this.cpf = cpf;
 	}
 
+<<<<<<< HEAD
 	public String getMsg() {
 		return msg;
 	}
@@ -83,4 +96,6 @@ public class Partner {
 		this.msg = msg;
 	}
 
+=======
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 }

@@ -5,7 +5,11 @@ import javax.persistence.Id;
 //@Entity(name = "users")
 public class User {
 
+<<<<<<< HEAD
 	@Id
+=======
+//	@Id
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
 	private Long cpf;
 	private String name;
 	private String lastName;
