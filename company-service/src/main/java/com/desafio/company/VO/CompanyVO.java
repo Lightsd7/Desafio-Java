@@ -2,18 +2,37 @@ package com.desafio.company.VO;
 
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 //@Entity(name = "companies")
 public class CompanyVO {
 
 	private Long cnpj;
 	private String razaoSocial;
 	private String nomeFantasia;
+<<<<<<< HEAD
+=======
+	private String msg;
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	private List<UserVO> usersVO;
 	
 	public CompanyVO() {
 		super();
 	}
 
+<<<<<<< HEAD
+=======
+	public CompanyVO(String msg) {
+		super();
+		this.setMsg(msg);
+	}
+
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	public CompanyVO(Long cnpj, String razaoSocial, String nomeFantasia) {
 		super();
 		this.cnpj = cnpj;
@@ -45,6 +64,17 @@ public class CompanyVO {
 		this.nomeFantasia = nomeFantasia;
 	}
 
+<<<<<<< HEAD
+=======
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	public List<UserVO> getUsersVO() {
 		return usersVO;
 	}

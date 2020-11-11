@@ -6,9 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+<<<<<<< HEAD
 import com.desafio.partner.VO.PartnerVO;
 import com.desafio.partner.VO.ResponsePartnerVO;
 import com.desafio.partner.VO.ResponseUserVO;
+=======
+import com.desafio.partner.VO.ResponseTemplateVO;
+import com.desafio.partner.VO.User;
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 import com.desafio.partner.entity.Partner;
 import com.desafio.partner.repository.PartnerRepository;
 
@@ -21,6 +26,7 @@ public class PartnerService {
 	@Autowired
 	private RestTemplate restTemplate;
 
+<<<<<<< HEAD
 	public ResponsePartnerVO savePartner(Partner partner) {
 		ResponsePartnerVO vo = new ResponsePartnerVO();
 		if (partnerRepository.findPartnerByCpfPartner(partner.getCpfPartner()) != null) {
@@ -110,4 +116,69 @@ public class PartnerService {
 		}
 		return user;
 	}
+=======
+	public Partner savePartner(Partner partner) {
+<<<<<<< HEAD
+//		User user = findUser(partner.getCpf());
+		if (partnerRepository.findPartnerByCpfPartner(partner.getCpfPartner()) == null) {
+			if (findUser(partner.getCpf()) != null) {
+				return partnerRepository.save(partner);
+			} else {
+				return new Partner("Não existe usuário com o CPF: " + partner.getCpf());
+			}
+		}
+		return new Partner("Cônjuge com CPF: " + partner.getCpfPartner() + " já foi cadastrado.");
+//		User user = this.findUser(partner.getCpf());
+//		if (user.getCpf() != null) {
+//			if(partnerRepository.findPartnerByCpfPartner(partner.getCpfPartner()) != null) {
+//				return new Partner("Cônjuge já existe.");
+//			}
+//			return partnerRepository.save(partner);
+//		} else {
+//			return new Partner("Não foi possível cadastrar cônjuge, pois CPF de usuário é inexistente.");
+//		}
+//		return partnerRepository.save(partner);
+	}
+
+	public Partner findPartnerByCpfPartner(Long cpfPartner) {
+		Partner temp;
+		try {
+			 temp =	partnerRepository.findPartnerByCpfPartner(cpfPartner);
+		} catch (Exception e) {
+			temp = new Partner();
+		}
+		return temp;
+	}
+
+=======
+		return partnerRepository.save(partner);
+	}
+
+	public Partner findPartnerByCpfPartner(Long cpfPartner) {
+		return partnerRepository.findPartnerByCpfPartner(cpfPartner);
+	}
+	
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+	public List<Partner> findAll() {
+		return partnerRepository.findAll();
+	}
+
+	public ResponseTemplateVO getPartnerWithUser(Long cpfPartner) {
+		ResponseTemplateVO vo = new ResponseTemplateVO();
+		Partner partner = partnerRepository.findPartnerByCpfPartner(cpfPartner);
+
+		User user = restTemplate.getForObject("http://localhost:9001/users/" + partner.getCpf(), User.class);
+		vo.setPartner(partner);
+		vo.setUser(user);
+		return vo;
+	}
+<<<<<<< HEAD
+
+	private User findUser(Long cpf) {
+		User user = restTemplate.getForObject("http://localhost:9001/users/cpf/" + cpf, User.class);
+		return user;
+	}
+=======
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 }

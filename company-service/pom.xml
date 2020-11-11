@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<<<<<<< HEAD
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<<<<<<< HEAD
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.4.RELEASE</version>
+<<<<<<< HEAD
 		<relativePath /> <!-- lookup parent from repository -->
+=======
+<<<<<<< HEAD
+		<relativePath /> <!-- lookup parent from repository -->
+=======
+<<<<<<< HEAD
+		<relativePath /> <!-- lookup parent from repository -->
+=======
+		<relativePath/> <!-- lookup parent from repository -->
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	</parent>
 	<groupId>com.desafio</groupId>
 	<artifactId>company-service</artifactId>
@@ -55,10 +81,25 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3999983d423d04a0e9c11ec007bdeef819ca01ee
+>>>>>>> cc4f82afc0b199b0c1960524ec3396306b2350d2
+>>>>>>> a3a0321511786cbadd0905ea0bcad0659b79b7bb
 	</dependencies>
 
 	<build>
